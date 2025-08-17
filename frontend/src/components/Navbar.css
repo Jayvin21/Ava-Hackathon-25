@@ -1,0 +1,78 @@
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  border-bottom: 1px solid;
+}
+
+.navbar {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* action buttons container */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* general button styling */
+.nav-actions button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+/* hover effect */
+.nav-actions button:hover {
+  transform: scale(1.05);
+}
+
+/* specific buttons */
+.toggle-btn {
+  font-size: 1.2rem;
+  padding: 6px 10px;
+}
+
+.wallet-btn {
+  font-weight: 600;
+}
+
+.profile-btn {
+  font-weight: 600;
+}
+
+/* Light mode styles */
+.app.light .navbar {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.app.light .navbar button {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+/* Dark mode styles */
+.app.dark .navbar {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.app.dark .navbar button {
+  background-color: #333;
+  color: #fff;
+}

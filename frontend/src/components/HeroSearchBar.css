@@ -1,0 +1,88 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Search container */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.search-input {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 300px;
+  font-size: 16px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.5);
+}
+
+.search-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+/* 🌞 Light mode */
+.app.light .hero {
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+.app.light .search-input {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+.app.light .search-btn {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.app.light .search-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* 🌙 Dark mode */
+.app.dark .hero {
+  background-color: #121212;
+  color: #fff;
+}
+
+.app.dark .search-input {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.app.dark .search-btn {
+  background-color: #333;
+  color: #fff;
+}
+
+.app.dark .search-btn:hover {
+  background-color: #444;
+}

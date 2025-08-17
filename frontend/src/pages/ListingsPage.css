@@ -1,0 +1,30 @@
+.listings-page {
+  padding: 2rem;
+  position: relative;
+}
+
+.sell-new-item-btn {
+  position: fixed; /* floating above page */
+  top: 80px; /* just below navbar */
+  right: 30px;
+  padding: 0.7rem 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: background 0.2s;
+}
+
+.sell-new-item-btn:hover {
+  background-color: #0056b3;
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}

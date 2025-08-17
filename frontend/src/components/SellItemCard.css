@@ -1,0 +1,89 @@
+.sell-item-card {
+  width: 200px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+  cursor: default;
+  margin: 10px;
+}
+
+.sell-item-card:hover {
+  transform: translateY(-5px);
+}
+
+.sell-item-image {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sell-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ensures images fill container without distortion */
+}
+
+.sell-item-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-grow: 1;
+}
+
+.sell-item-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.sell-item-price {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+.sell-item-chain {
+  font-weight: 400;
+  color: #777;
+}
+
+.sell-item-status {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 6px;
+  padding: 2px 4px;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.sell-item-status.pendingpayment {
+  background-color: #f0ad4e;
+}
+
+.sell-item-status.pendingshipment {
+  background-color: #5bc0de;
+}
+
+.sell-item-status.shipped {
+  background-color: #0275d8;
+}
+
+.sell-item-status.delivered {
+  background-color: #5cb85c;
+}
+
+.sell-item-status.cancelled {
+  background-color: #d9534f;
+}

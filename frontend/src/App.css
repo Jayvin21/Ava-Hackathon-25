@@ -1,0 +1,35 @@
+/* global app wrapper */
+.app {
+  min-height: 100vh; /* always full screen */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Light theme */
+.app.light {
+  background-color: #f9f9f9;
+  color: #111;
+}
+
+/* Dark theme */
+.app.dark {
+  background-color: #121212;
+  color: #f9f9f9;
+}
+
+/* make all pages adapt */
+.app.light a,
+.app.light button,
+.app.light input{
+  color: #111;
+}
+
+.app.dark a,
+.app.dark button,
+.app.dark input {
+  color: #f9f9f9;
+}
+
+.app {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

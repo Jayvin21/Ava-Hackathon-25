@@ -1,0 +1,46 @@
+.sell-item-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.sell-item-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.sell-item-form h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.sell-item-form form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.sell-item-form input,
+.sell-item-form textarea,
+.sell-item-form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
