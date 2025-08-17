@@ -3,9 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { ethers } from "ethers";
 import "./Navbar.css";
 
-const Navbar = ({ darkMode, toggleDarkMode }) => {
+const Navbar = ({ darkMode, toggleDarkMode, account, setAccount }) => {
   const navigate = useNavigate();
-  const [account, setAccount] = useState(null);
   const [connecting, setConnecting] = useState(false);
 
   const shortAddr = (addr) => `${addr.slice(0, 6)}...${addr.slice(-4)}`;
@@ -28,23 +27,19 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   };
 
   useEffect(() => {
-    const init = async () => {
-      if (!window.ethereum) return;
-      const provider = new ethers.BrowserProvider(window.ethereum);
-      const accounts = await provider.send("eth_accounts", []);
-      if (accounts && accounts[0]) setAccount(accounts[0]);
+    if (!window.ethereum) return;
 
-      const handleAccountsChanged = (accs) => setAccount(accs[0] || null);
-      window.ethereum.on("accountsChanged", handleAccountsChanged);
+    // Listen for account changes while app is running
+    const handleAccountsChanged = (accs) => setAccount(accs[0] || null);
+    window.ethereum.on("accountsChanged", handleAccountsChanged);
 
-      return () => {
-        if (window.ethereum.removeListener) {
-          window.ethereum.removeListener("accountsChanged", handleAccountsChanged);
-        }
-      };
+    // Cleanup listener on unmount
+    return () => {
+      if (window.ethereum.removeListener) {
+        window.ethereum.removeListener("accountsChanged", handleAccountsChanged);
+      }
     };
-    init();
-  }, []);
+  }, [setAccount]);
 
   return (
     <nav className="navbar">
